@@ -35,31 +35,38 @@ go-memory-alignment
 
 ## How to Run the Examples
 
+## Clone the repo
+```bash
+  git clone https://github.com/sogolHedaytaManesh/go-memory-alignment.git
+```
+
 Each folder contains a standalone Go file demonstrating a specific memory alignment concept.  
 You can run them individually using `go run`.
 
-### 1. Stack vs Heap
+### 1. Concurrency Alignment
+```bash
+  cd concurrency_alignment
+  go run atomic_example.go
+  go run false_sharing.go
+  go run unsafe_example.go
+```
+### 2. Stack VS Heap
 ```bash
   cd stack_vs_heap
-  go run stack_vs_heap.go
+  go run escape_analysis.go
+  go run heap_example.go
+  go run stack_example.go
 ```
-### 2. Struct Ordering & Padding
+### 3. Struct Alignment
 ```bash
-  cd struct_ordering
-  go run struct_ordering.go
+  cd struct_alignment
+  go run bad_order.go
+  go run good_order.go
+  go run nested_struct.go
 ```
-### 3. Atomic Alignment
+### 4. Tools
 ```bash
-  cd atomic_alignment
-  go run atomic_alignment.go
-```
-### 4. Cache Line & False Sharing
-```bash
-  cd cache_line
-  go run cache_line.go
-```
-### 5. Pointers & Escape Analysis
-```bash
-  cd pointers_and_escapes
-  go run pointers_and_escapes.go
+  cd tools
+  go run inspect_size.go
+  go run reflect_example.go
 ```
